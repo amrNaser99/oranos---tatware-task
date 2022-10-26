@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oranos/model/chat_message.dart';
 import 'package:oranos/model/experts.dart';
 import 'package:oranos/presentation/cubit/app_state.dart';
 import 'package:oranos/presentation/widgets/build_message.dart';
+
+import '../pages/main/main_screen.dart';
 
 class AppCubit extends Cubit<AppState> {
   AppCubit() : super(AppInitial());
@@ -34,7 +37,7 @@ class AppCubit extends Cubit<AppState> {
     'What\'s Your FirstName',
   ];
 
-  void onSendPressed() {
+  void onSendPressed(context) {
     if (isSendClicked) {
       userName = "$userName ${messageController.text.trim()}";
       botMessages = [

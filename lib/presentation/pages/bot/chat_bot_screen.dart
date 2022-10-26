@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oranos/core/app_colors..dart';
+import 'package:oranos/presentation/pages/main/main_screen.dart';
 import 'package:oranos/presentation/widgets/build_message.dart';
 
 import '../../cubit/app_cubit.dart';
@@ -18,7 +19,7 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
   @override
   initState() {
     super.initState();
-    AppCubit.get(context).onSendPressed();
+    AppCubit.get(context).onSendPressed(context);
   }
 
   @override
@@ -28,7 +29,7 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
     return BlocConsumer<AppCubit, AppState>(
       listener: (context, state) {
         if (state is SendUserMessageState) {
-          cubit.onSendPressed();
+          cubit.onSendPressed(context);
         }
       },
       builder: (context, state) {
@@ -61,7 +62,6 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
                                   setState(() {
                                     cubit.isCheckSecurity = value!;
                                   });
-
                                 },
                                 text: 'Security'),
                             CheckBoxItem(
@@ -69,7 +69,6 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
                                 onItemChanged: (value) {
                                   setState(() {
                                     cubit.isSC = value!;
-
                                   });
                                 },
                                 text: 'Supply Chain'),
@@ -95,7 +94,6 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
                                   setState(() {
                                     cubit.isBR = value!;
                                   });
-
                                 },
                                 text: 'Business Research'),
                           ],
@@ -145,7 +143,10 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
                       ),
                       IconButton(
                         onPressed: () {
-                          cubit.onSendPressed();
+                          if(  cubit.currentIndex==3){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const MainScreen()));
+                          }else{
+                            cubit.onSendPressed(context);}
                         },
                         icon: const Icon(
                           Icons.send,
