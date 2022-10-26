@@ -58,37 +58,44 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
                             CheckBoxItem(
                                 itemValue: cubit.isCheckSecurity,
                                 onItemChanged: (value) {
-                                  cubit.onCheckPressed(
-                                      value: value,
-                                      isCheckBox: cubit.isCheckSecurity);
+                                  setState(() {
+                                    cubit.isCheckSecurity = value!;
+                                  });
+
                                 },
                                 text: 'Security'),
                             CheckBoxItem(
                                 itemValue: cubit.isSC,
                                 onItemChanged: (value) {
-                                  cubit.onCheckPressed(
-                                      value: value, isCheckBox: cubit.isSC);
+                                  setState(() {
+                                    cubit.isSC = value!;
+
+                                  });
                                 },
                                 text: 'Supply Chain'),
                             CheckBoxItem(
                                 itemValue: cubit.isIT,
                                 onItemChanged: (value) {
-                                  cubit.onCheckPressed(
-                                      value: value, isCheckBox: cubit.isIT);
+                                  setState(() {
+                                    cubit.isIT = value!;
+                                  });
                                 },
                                 text: 'Information Technology'),
                             CheckBoxItem(
                                 itemValue: cubit.isHR,
                                 onItemChanged: (value) {
-                                  cubit.onCheckPressed(
-                                      value: value, isCheckBox: cubit.isHR);
+                                  setState(() {
+                                    cubit.isHR = value!;
+                                  });
                                 },
                                 text: 'Human Resource'),
                             CheckBoxItem(
                                 itemValue: cubit.isBR,
                                 onItemChanged: (value) {
-                                  cubit.onCheckPressed(
-                                      value: value, isCheckBox: cubit.isBR);
+                                  setState(() {
+                                    cubit.isBR = value!;
+                                  });
+
                                 },
                                 text: 'Business Research'),
                           ],

@@ -78,7 +78,7 @@ class AppCubit extends Cubit<AppState> {
 
   void onCheckPressed({required isCheckBox, required value}) {
     isCheckBox = value;
-    debugPrint('onCheckPressed');
+    debugPrint('onCheckPressed = $isCheckBox');
     emit(onCheckPressedState());
   }
 

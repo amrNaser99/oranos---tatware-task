@@ -19,12 +19,10 @@ class CheckBoxItem extends StatelessWidget {
     return Row(
       children: [
         Checkbox(
-          checkColor: AppColors.lightGrey,
           activeColor: AppColors.mainGreen,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
           value: itemValue,
-
           onChanged: onItemChanged,
         ),
         Text(text),
