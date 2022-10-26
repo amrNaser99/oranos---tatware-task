@@ -116,19 +116,17 @@ class MainScreen extends StatelessWidget {
                   ),
                 ),
                 AppSpaces.vSpace20,
-                Expanded(child: Container(
-                  child: GestureDetector,
-                ))
-                // Align(
-                //   alignment: Alignment.bottomCenter,
-                //   child: Container(
-                //     height: 5,
-                //     width: MediaQuery.of(context).size.width * 0.4,
-                //     decoration: BoxDecoration(
-                //       color: Colors.grey,
-                //     ),
-                //   ),
-                // )
+                Expanded(child: InkWell(onTap: () {}, child: Container())),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    height: 5,
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    decoration: const BoxDecoration(
+                      color: Colors.grey,
+                    ),
+                  ),
+                )
               ],
             ),
           ),

@@ -19,7 +19,7 @@ class _StartScreenState extends State<StartScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/read.png'),
+            image: AssetImage('assets/images/img.png'),
             fit: BoxFit.cover,
           ),
         ),

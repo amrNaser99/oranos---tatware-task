@@ -42,7 +42,7 @@ class StartBotScreen extends StatelessWidget {
               right: 25,
               top: MediaQuery.of(context).size.height * 0.18,
               child: Image.asset(
-                'assets/path/man.png',
+                'assets/path/img_1.png',
                 height: MediaQuery.of(context).size.height * 0.26,
               ),
             ),
@@ -51,7 +51,7 @@ class StartBotScreen extends StatelessWidget {
               left: 0,
               top: MediaQuery.of(context).size.height * 0.44,
               child: Image.asset(
-                'assets/images/news.png',
+                'assets/images/img_2.png',
                 height: MediaQuery.of(context).size.height * 0.3,
               ),
             ),

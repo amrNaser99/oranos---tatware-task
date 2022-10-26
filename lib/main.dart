@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               title: AppStrings.appName,
               theme: AppThemes.lightTheme,
-              home: const MainScreen(),
+              home: const StartScreen(),
             ),
           ),
     );
